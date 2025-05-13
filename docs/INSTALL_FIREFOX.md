@@ -7,3 +7,6 @@
 4. Select `This Firefox`
 5. Click `Load Temporary Add-on...` > select downloaded ZIP archive (should me `LittleHome-main.zip`)
 6. Enjoy your new tab/home page
+
+# Warning
+After browser restart - extension will be deleted!
