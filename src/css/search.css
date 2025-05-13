@@ -1,0 +1,44 @@
+#search_ddd {
+    z-index: 10;
+    position: fixed;
+    color: #000;
+    /* visibility: hidden */
+    opacity: 0;
+}
+
+#searcher {
+    background: rgba(0,0,0,.2);
+    transition: opacity .2s;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#searcher > h1 {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-size: 70px;
+    text-align: center;
+} #searcher > h1 > span {
+    transition: background .2s;
+    font-size: 33px;
+    font-family: 'Fira Code';
+    background: rgba(255,255,255,.1);
+    padding: 0 5px 0;
+    border-radius: 10px;
+    vertical-align:middle;
+
+} #searcher > h1 > span.error {
+    background: rgba(255,100,100,.2);
+}  #searcher > p {
+    font-family: 'Nunito';
+}

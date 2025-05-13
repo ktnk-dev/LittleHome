@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "LittleHome",
+    "version": "0.2",
+    "description": "My personal homepage with bangs support",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "icons": {
+        "48": "src/icon.svg"
+    },
+    "action": {
+        "default_icon": "src/icon.svg"
+    },
+    "chrome_url_overrides": {
+        "newtab": "src/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/js/abstract.js",
+                "src/js/storage.js",
+                "src/js/bang.js",
+                "src/js/main.js"
+            ]
+        }
+    ]
+}
