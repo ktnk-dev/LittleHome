@@ -33,7 +33,7 @@ const clock = async () => {
         )
     )
     render()
-    setInterval(() => render(), 1000);
+    setInterval(() => render(), 500);
 }
 
 
@@ -61,7 +61,7 @@ searcher = () => {
 
     }
     const find = element => {
-        const query = element.target.value
+        const query = element.target.value.trim()
         const fb = findbang(query)
         const url = fb.valid ? fb.data.u : 'https://www.google.com/search?q={{{s}}}'
         window.location.href = url.replace('{{{s}}}', encodeURI(fb.found ? query.replace('!'+fb.inputed, '').trim() : query.trim()))
@@ -78,6 +78,3 @@ window.addEventListener('DOMContentLoaded', async () => {
     clock()
     searcher()
 })
-
-
-setInterval()
