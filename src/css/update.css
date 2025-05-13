@@ -1,0 +1,24 @@
+#update {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 13px;
+    font-family: 'Nunito';
+    background: rgba(255,255,255,.1);
+    border-radius: 100px;
+    margin: 10px;
+    display: flex;
+    z-index: 20;
+    transition: transform .5s;
+} #update > * {
+    padding: 5px 10px;
+} #update > a {
+    text-decoration: none;
+    background: rgba(255,255,255,.1);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#update.hidden {
+    transform: translateY(40px);
+}

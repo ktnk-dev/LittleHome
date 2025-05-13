@@ -25,9 +25,9 @@ const CookieManager = {
 
 function getFromStorage(variable_name) {
     const c = CookieManager.get(variable_name)
-    return c === '' ? null : c
+    return c === '' ? null : JSON.parse(c).data
 }
 
 function setToStorage(variable_name, value) {
-    CookieManager.set(variable_name, value)
+    CookieManager.set(variable_name, JSON.stringify({data: value}))
 }

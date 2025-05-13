@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
-
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/clock.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/update.css">
 </head>
 <body>
     <div id="background"></div>
@@ -17,10 +17,12 @@
         <p>Search via Google</p>
     </div>
     <input type="text" id="search_ddd" autocorrect="off" autocomplete="off" autofocus>
-
+    <div id="update" class="hidden"><span>update available</span> <a href="https://github.com/ktnk-dev/LittleHome">download</a></div>
     <script src="js/abstract.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/bang.js"></script>
+    <script src="js/builtin.js"></script>
+    <script src="js/update.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

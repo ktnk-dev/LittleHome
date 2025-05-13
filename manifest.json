@@ -22,10 +22,6 @@
                 "<all_urls>"
             ],
             "js": [
-                "src/js/abstract.js",
-                "src/js/storage.js",
-                "src/js/bang.js",
-                "src/js/main.js"
             ]
         }
     ]
