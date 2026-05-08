@@ -217,6 +217,9 @@ body {
     initial-value: 7%
 }
 
+#background {
+    background-color: var(--surface-000);
+}
 #background.default {
     --x-0: 85%;
     --y-0: 80%;
