@@ -14,7 +14,7 @@
     >div {
         cursor: pointer;
         rotate: -90deg;
-        transform: translateY(98px);
+        transform: translateY(98px) scale(.9);
         transition: transform .2s;
         gap: 7px;
         display: flex;
