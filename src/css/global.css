@@ -1,3 +1,20 @@
+:root {
+    /* --base_bg_color: 10;
+    --base_bg_color_range: 10;
+    --base_bg_saturation: 10%;
+
+    --color_text_white: #fff;
+    --color_text_gray: #999;
+    --surface-000: #000;
+    --surface-100: #222;
+    --surface-200: #333;
+    --surface-300: #444;
+
+    --sans: 'Nunito';
+    --serif: 'Playfair Display';
+    --monospace: monospace; */
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -5,12 +22,13 @@ body {
     overflow-y: 0;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: var(--surface-000) !important;
 }
 * {
     margin: 0;
     padding: 0;
     color: #fff;
+    /* background: #f002 !important; */
 }
 
 #background {
@@ -18,9 +36,9 @@ body {
     --base_bg_color_tint_p: calc(var(--base_bg_color) + var(--base_bg_color_range)); 
     --base_bg_color_tint_n: calc(var(--base_bg_color) - var(--base_bg_color_range)); 
 
-    --c-0-base: hsla(var(--base_bg_color), calc(var(--base_bg_saturation) - 9%), 12%, 1);
-    --c-1-base: hsla(var(--base_bg_color_tint_p), calc(var(--base_bg_saturation) - 8%), 12%, 1);
-    --c-3-base: hsla(var(--base_bg_color_tint_n), calc(var(--base_bg_saturation) - 6%), 36%, 1);
+    --c-0-base: hsla(var(--base_bg_color), calc(var(--base_bg_saturation) - 9%), calc(var(--base_bg_brightness) + 2%), 1);
+    --c-1-base: hsla(var(--base_bg_color_tint_p), calc(var(--base_bg_saturation) - 8%), calc(var(--base_bg_brightness) + 2%), 1);
+    --c-3-base: hsla(var(--base_bg_color_tint_n), calc(var(--base_bg_saturation) - 6%), calc(var(--base_bg_brightness) + 26%), 1);
 
     height: 100vh;
     width: 100vw;
@@ -199,7 +217,7 @@ body {
     initial-value: 7%
 }
 
-#background {
+#background.default {
     --x-0: 85%;
     --y-0: 80%;
     --c-0: hsla(var(--base_bg_color), calc(var(--base_bg_saturation) - 9%), 12%, 1);
@@ -212,7 +230,7 @@ body {
     --c-3: hsla(var(--base_bg_color_tint_n), calc(var(--base_bg_saturation) - 6%), 36%, 1);
     --x-3: 24%;
     --y-3: 7%;
-    background-color: hsla(0,0%, 0%, 1);
+    background-color: var(--surface-000);
     background-image: 
         radial-gradient(
             circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), 

@@ -1,20 +1,47 @@
-#settingsbutton {
+.settings_visual_help {
     z-index: 11;
     position: fixed;
-    bottom: 5px;
-    left: 5px;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
-
-    svg {
-        transition: background .2s;
-        border-radius: 100px;
-        padding: 5px;
-        width: 20px !important;
-        height: 20px !important;
-        fill: rgba(255,255,255,.2) !important;
+    height: 100dvh;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 50px;
+    cursor: default;
+    >div {
+        cursor: pointer;
+        rotate: -90deg;
+        transform: translateY(98px);
+        transition: transform .2s;
+        gap: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface-100);
+        padding: 5px 10px;
+        border-radius: 10px 10px 0 0;
+        border: solid 1px var(--surface-300);
+        border-bottom: none;
+        user-select: none;
     }
-    svg:hover {
-        background: rgba(255,255,255,.1);
+    >div:hover {
+        background: var(--surface-200);
+    }
+    >div:active {
+        background: var(--surface-300);
+    }
+
+    span:not(.icon) {
+        text-wrap: nowrap;
+        font-family: var(--sans);
+    }
+}
+.settings_visual_help:hover {
+    >div {
+        transform: translateY(58px);
     }
 }
 
@@ -32,7 +59,7 @@
     border: solid 1px rgba(255,255,255,.1);
 
     h2 {
-        font-family: 'Playfair Display';
+        font-family: var(--serif);
         font-weight: normal;
     }
     br {
@@ -40,7 +67,7 @@
     }
     h4 {
         margin-top: 10px;
-        font-family: 'Nunito';
+        font-family: var(--sans);
         /* font-weight: normal; */
     }
 }
