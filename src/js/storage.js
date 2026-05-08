@@ -29,12 +29,6 @@ const storage = {
     }
 }
 
-/**
- * @typedef {Object} Bang
- * @prop {string} keyword
- * @prop {string} name
- * @prop {string} url
- */
 
 /**
  * @typedef {Object} Preset
@@ -46,7 +40,6 @@ const storage = {
  * @prop {number} base_bg_color
  * @prop {number} base_bg_saturation
  * @prop {number} base_bg_color_range
- * @prop {Bang[]} bangs_override
  * @prop {string} search_url 
  * @prop {bool} display_suggestions
  * @prop {bool} display_history
@@ -159,9 +152,6 @@ const preset = {
         base_bg_saturation: 10,
         base_bg_brightness: 10,
         base_bg_color_range: 10,
-        bangs_override: [
-            {name: 'Google Search AI', keyword: 'ai', url: 'https://www.google.com/search?q={{{s}}}&sourceid=chrome&ie=UTF-8&amc=1&oq={{{s}}}&udm=50&aep=109&cud='}
-        ],
         search_url: 'https://www.google.com/search?q={{{s}}}',
         display_suggestions: false,
         display_history: false,
@@ -176,3 +166,13 @@ const preset = {
         s300: '#444',
     }}
 }
+
+/**
+ * @typedef {Object} Bang
+ * @prop {string} keyword
+ * @prop {string} name
+ * @prop {string} url
+ */
+var bangs_override = [
+    {name: 'Google Search AI', keyword: 'ai', url: 'https://www.google.com/search?q={{{s}}}&sourceid=chrome&ie=UTF-8&amc=1&oq={{{s}}}&udm=50&aep=109&cud='}
+]
