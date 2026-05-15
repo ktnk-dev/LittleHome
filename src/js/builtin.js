@@ -68,8 +68,4 @@ searcher = () => {
     }
     document.querySelector('#search_ddd').addEventListener('change', find)
     document.querySelector('#search_ddd').addEventListener('input', (e) => {proceed(e.target.value.trim())})
-    setInterval(() => {
-        document.querySelector('#search_ddd').focus()
-        proceed(document.querySelector('#search_ddd').value.trim())
-    }, 100);
 }

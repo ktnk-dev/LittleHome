@@ -1,21 +1,16 @@
-:root {
-    /* --base_bg_color: 10;
+
+body {
+    --base_bg_color: 10;
     --base_bg_color_range: 10;
     --base_bg_saturation: 10%;
 
     --color_text_white: #fff;
     --color_text_gray: #999;
-    --surface-000: #000;
-    --surface-100: #222;
-    --surface-200: #333;
-    --surface-300: #444;
+    --surface-000: var(--s000);
+    --surface-100: var(--s100);
+    --surface-200: color-mix(in srgb, var(--s200), transparent 95%);
+    --surface-300: color-mix(in srgb, var(--s300), transparent 85%);
 
-    --sans: 'Nunito';
-    --serif: 'Playfair Display';
-    --monospace: monospace; */
-}
-
-body {
     display: flex;
     height: 100vh;
     width: 100vw;

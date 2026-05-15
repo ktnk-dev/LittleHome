@@ -34,18 +34,16 @@ const storage = {
  * @typedef {Object} Preset
  * @prop {number} version
  * @prop {string} name
- * @prop {bool} disable_clock
- * @prop {bool} disable_animations
  * @prop {"default" | "url" | "color" | "gradient"} background_type // TODO: gradient
  * @prop {number} base_bg_color
  * @prop {number} base_bg_saturation
  * @prop {number} base_bg_color_range
- * @prop {string} search_url 
- * @prop {bool} display_suggestions
- * @prop {bool} display_history
  * @prop {string} font_sans
+//  * @prop {string} font_sans_size
  * @prop {string} font_serif
+//  * @prop {string} font_serif_size
  * @prop {string} font_monospace
+//  * @prop {string} font_monospace_size
  * @prop {string} color_text_white
  * @prop {string} color_text_gray
  * @prop {string} s000
@@ -114,10 +112,10 @@ const preset = {
             )
         }
         const style_override = {
-            s000: 'surface-000',
-            s100: 'surface-100',
-            s200: 'surface-200',
-            s300: 'surface-300',
+            // s000: 'surface-000',
+            // s100: 'surface-100',
+            // s200: 'surface-200',
+            // s300: 'surface-300',
             font_sans: 'sans',
             font_serif: 'serif',
             font_monospace: 'monospace',
@@ -145,26 +143,34 @@ const preset = {
     default: () => { return {
         name: 'Defualt',
         version: preset.current_version,
-        disable_clock: false,
-        disable_animations: false,
+        // disable_clock: false,
+        // disable_animations: false,
         background_type: 'default',
         base_bg_color: 10,
         base_bg_saturation: 10,
         base_bg_brightness: 10,
         base_bg_color_range: 10,
-        search_url: 'https://www.google.com/search?q={{{s}}}',
-        display_suggestions: false,
-        display_history: false,
+        // search_url: 'https://www.google.com/search?q={{{s}}}',
+        // display_suggestions: false,
+        // display_history: false,
         font_sans: 'Nunito',
         font_serif: 'Playfair Display',
         font_monospace: 'monospace',
         color_text_white: '#fff',
         color_text_gray: '#999',
         s000: '#000',
-        s100: '#222',
-        s200: '#333',
-        s300: '#444',
+        s100: '#fff',
+        s200: '#fff',
+        s300: '#fff',
     }}
+}
+
+const defaults = {
+    bangs: [
+        {name: 'Test bang', keyword: 'test_bang', url: 'https://www.google.com/search?q={{{s}}}'},
+        {name: 'Google Search AI', keyword: 'ai', url: 'https://www.google.com/search?q={{{s}}}&sourceid=chrome&ie=UTF-8&amc=1&oq={{{s}}}&udm=50&aep=109&cud='}
+    ],
+    search_engine: 'https://www.google.com/search?q={{{s}}}'
 }
 
 /**
@@ -173,6 +179,8 @@ const preset = {
  * @prop {string} name
  * @prop {string} url
  */
-var bangs_override = [
-    {name: 'Google Search AI', keyword: 'ai', url: 'https://www.google.com/search?q={{{s}}}&sourceid=chrome&ie=UTF-8&amc=1&oq={{{s}}}&udm=50&aep=109&cud='}
-]
+/** @type {Bang[]} */
+var bangs_override = storage.get('_bangs')  || defaults.bangs
+
+/** @type {string} */
+var search_engine  = storage.get('_search') || defaults.search_engine
